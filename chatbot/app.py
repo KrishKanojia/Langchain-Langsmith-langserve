@@ -19,14 +19,14 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-# Streamlit Framework
-st.title('Langchain Demo With Ollama API')
-input_text = st.text_input("Search the topic u want")
-
 # Ollama LLM
 llm = Ollama(model="llama2")
 output_parser = StrOutputParser()
 chain = prompt|llm|output_parser
+
+# Streamlit Framework
+st.title('Langchain Demo With Ollama API')
+input_text = st.text_input("Search the topic u want")
 
 if input_text:
     st.write_stream(chain.stream({'question': input_text}))
