@@ -14,3 +14,5 @@ faiss-cpu
 langserve
 fastapi
 bs4
+chromadb
+faiss-cpu
