@@ -16,3 +16,6 @@ fastapi
 bs4
 chromadb
 faiss-cpu
+arxiv
+wikipedia
+langchainhub
